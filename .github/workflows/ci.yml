@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: kdheepak/panvimdoc@main
         with:
-          vimdoc: winresize.nvim
+          vimdoc: cppguard
           version: "Neovim >= 0.10.0"
           demojify: true
       - uses: stefanzweifel/git-auto-commit-action@v5
