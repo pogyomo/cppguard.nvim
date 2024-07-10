@@ -1,8 +1,5 @@
 name: ci
 
-permissions:
-  contents: write
-
 on:
   push:
     branches:
