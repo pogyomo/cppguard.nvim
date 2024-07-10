@@ -1,11 +1,25 @@
 # :shield: cppguard.nvim
 
-Automatically generates proper include guard for c++
+Automatically generates proper include guard for C++
 
 ## :clipboard: Requirements
 
 - Neovim >= 0.10.0
 - [luasnip](https://github.com/L3MON4D3/LuaSnip) (*optional*)
+
+## :inbox_tray: Installation
+
+With [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+return {
+    "pogyomo/cppguard.nvim",
+    dependencies = {
+        "L3MON4D3/LuaSnip" -- If you're using luasnip.
+    },
+    lazy = true,
+}
+```
 
 ## :notebook: Introduction
 
