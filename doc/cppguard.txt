@@ -5,6 +5,7 @@ Table of Contents                                 *cppguard-table-of-contents*
 
 1. cppguard.nvim                                      |cppguard-cppguard.nvim|
   - Requirements                         |cppguard-cppguard.nvim-requirements|
+  - Installation                         |cppguard-cppguard.nvim-installation|
   - Introduction                         |cppguard-cppguard.nvim-introduction|
   - Usage                                       |cppguard-cppguard.nvim-usage|
   - APIS                                         |cppguard-cppguard.nvim-apis|
@@ -12,13 +13,28 @@ Table of Contents                                 *cppguard-table-of-contents*
 ==============================================================================
 1. cppguard.nvim                                      *cppguard-cppguard.nvim*
 
-Automatically generates proper include guard for c++
+Automatically generates proper include guard for C++
 
 
 REQUIREMENTS                             *cppguard-cppguard.nvim-requirements*
 
 - Neovim >= 0.10.0
 - luasnip <https://github.com/L3MON4D3/LuaSnip> (_optional_)
+
+
+INSTALLATION                             *cppguard-cppguard.nvim-installation*
+
+With lazy.nvim <https://github.com/folke/lazy.nvim>
+
+>lua
+    return {
+        "pogyomo/cppguard.nvim",
+        dependencies = {
+            "L3MON4D3/LuaSnip" -- If you're using luasnip.
+        },
+        lazy = true,
+    }
+<
 
 
 INTRODUCTION                             *cppguard-cppguard.nvim-introduction*
