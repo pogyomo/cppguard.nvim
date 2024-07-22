@@ -1,4 +1,4 @@
-*cppguard.txt*          For Neovim >= 0.10.0         Last change: 2024 July 10
+*cppguard.txt*          For Neovim >= 0.10.0         Last change: 2024 July 22
 
 ==============================================================================
 Table of Contents                                 *cppguard-table-of-contents*
@@ -66,7 +66,7 @@ When you open file.h, then call this function, you will get
 `PROJECT_DIR_SUB_FILE_H_`, that is following google C++ Style Guide
 <https://google.github.io/styleguide/cppguide.html#The__define_Guard>.
 
-If you’re using luasnip, you can create a snippet that automatically creates
+If you’re using luasnip, you can add a snippet that automatically creates
 include guard with following code:
 
 >lua
@@ -89,7 +89,7 @@ This snippet works as follow when you’re in such above, for example:
     
     |
     
-    #endif 
+    #endif
 <
 
 
