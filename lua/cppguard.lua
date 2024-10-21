@@ -19,9 +19,14 @@ local function get_project_name_from_cmakelists(path)
         error(string.format("failed to open %s", path))
     end
     for line in f:lines() do
-        local success, _, name = string.find(line, "project%(%s*(%g+)")
+        local success, _, name = string.find(line, "^project%(%s*(%g+)%s*.*%)$")
         if success then
             return true, name
+        else
+            success, _, name = string.find(line, "^project%(%s*(%g+)")
+            if success then
+                return true, name
+            end
         end
     end
     return false, ""
