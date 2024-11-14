@@ -3,7 +3,7 @@ local M = {}
 ---Find CMakeLists.txt from parents.
 ---@return string[]
 local function find_cmakelists()
-    local ps = vim.fs.find("CMakeLists.txt", { upward = true })
+    local ps = vim.fs.find("CMakeLists.txt", { upward = true, limit = math.huge })
     if #ps == 0 then
         error("failed to find CMakeLists.txt")
     end
