@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/pogyomo/cppguard.nvim/compare/v1.0.3...v1.0.4) (2024-11-14)
+
+
+### Bug Fixes
+
+* replace `-` with `_` in filename ([dae108a](https://github.com/pogyomo/cppguard.nvim/commit/dae108aed96ef9ba6f486dc5a091155d85a7c62e))
+
 ## [1.0.3](https://github.com/pogyomo/cppguard.nvim/compare/v1.0.2...v1.0.3) (2024-11-14)
 
 
