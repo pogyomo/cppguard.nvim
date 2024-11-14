@@ -48,7 +48,7 @@ end
 ---@param s string
 ---@return string
 local function normalize(s)
-    local normalized, _ = string.gsub(string.upper(s), "%.", "_")
+    local normalized, _ = string.gsub(string.upper(s), "[%.%-]", "_")
     return normalized
 end
 
