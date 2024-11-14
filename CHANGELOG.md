@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/pogyomo/cppguard.nvim/compare/v1.0.2...v1.0.3) (2024-11-14)
+
+
+### Bug Fixes
+
+* find CMakeLists.txt until it contains project directive ([f9db83d](https://github.com/pogyomo/cppguard.nvim/commit/f9db83d31d32c4b3ce632077955511e9010fd694))
+
 ## [1.0.2](https://github.com/pogyomo/cppguard.nvim/compare/v1.0.1...v1.0.2) (2024-10-21)
 
 
