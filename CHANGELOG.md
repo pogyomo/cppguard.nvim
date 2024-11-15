@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/pogyomo/cppguard.nvim/compare/v1.0.4...v1.0.5) (2024-11-15)
+
+
+### Bug Fixes
+
+* removes duplicated project name at front ([be2e9cb](https://github.com/pogyomo/cppguard.nvim/commit/be2e9cbb4523afa3258f72e2750139105dadb77b))
+
 ## [1.0.4](https://github.com/pogyomo/cppguard.nvim/compare/v1.0.3...v1.0.4) (2024-11-14)
 
 
