@@ -78,20 +78,31 @@ function M.guard_string(opts)
         local current_path = vim.fs.normalize(vim.api.nvim_buf_get_name(0))
         local elements = vim.split(current_path, "/")
 
+        -- Skip until include or src appear
         local should_skip = true
-        local filtered = {}
+        local preprocessed = {}
         for _, element in ipairs(elements) do
             if element == "include" or element == "src" then
                 should_skip = false
             elseif not should_skip then
-                filtered[#filtered + 1] = element
+                preprocessed[#preprocessed + 1] = normalize(element)
             end
         end
 
-        local result = normalize(get_project_name())
-        for _, element in ipairs(filtered) do
-            result = string.format("%s_%s", result, normalize(element))
+        local is_head = true
+        local project_name = normalize(get_project_name())
+        local result = project_name
+        for _, element in ipairs(preprocessed) do
+            if is_head and element == project_name then
+                -- skip first element in preprocessed if it's same as project name.
+                -- Because some project creates a directory inside include directory which name is
+                -- same as project name, and we need to remove the duplicated one.
+            else
+                result = string.format("%s_%s", result, element)
+            end
+            is_head = false
         end
+
         return result .. "_"
     else
         error("unreachable")
