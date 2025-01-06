@@ -62,17 +62,9 @@ function M.guard_string(opts)
     opts = opts or {}
     opts.naming_method = opts.naming_method or "google"
 
-    vim.validate {
-        naming_method = {
-            opts.naming_method,
-            function()
-                return vim.tbl_contains({
-                    "google",
-                }, opts.naming_method)
-            end,
-            "google",
-        },
-    }
+    vim.validate("naming_method", opts.naming_method, function(v)
+        return vim.tbl_contains({ "google" }, v)
+    end, false, "google")
 
     if opts.naming_method == "google" then
         local current_path = vim.fs.normalize(vim.api.nvim_buf_get_name(0))
