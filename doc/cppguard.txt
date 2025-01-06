@@ -1,4 +1,4 @@
-*cppguard.txt*        For Neovim >= 0.10.0       Last change: 2024 November 15
+*cppguard.txt*        For Neovim >= 0.10.0        Last change: 2025 January 06
 
 ==============================================================================
 Table of Contents                                 *cppguard-table-of-contents*
